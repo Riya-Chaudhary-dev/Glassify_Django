@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--Navbar-->
+<div class="landing">
+  <div class="home-wrap">
+    <div class="home-inner" style=" background-image: url(static/img/catglasses2.jpg);">
+
+    </div>
+  </div>
+</div>
+<div id="home">
+  <div class="caption text-center">
+    <h1>Welcome to Glassify</h1>
+    <h3>Find all your Faces here!!</h3>
+    <a class="btn btn-outline-info btn-lg active scroll" href="#recomended">Want a Recomendation?</a>
+    <!-- Landing page end -->
+
+  </div>
+</div>
+<!--/.Navbar-->
+
+<!--Section: Products v.3-->
+<!-- <section class="text-center mb-4"></section> -->
+
+<!-- Start glasses -->
+
+
+<!-- End glasses -->
+
+<div class="landing" style=" height: 500px;">
+  <div class="home-wrap">
+    <div class="home-inner"
+      style=" background-image: url(https://wallpaperstock.net/reading-ray-ban-glasses-wallpapers_34991_1920x1080.jpg);">
+
+    </div>
+  </div>
+</div>
+
+<!--Section: Products v.3-->
+<!-- Start glasses -->
+
+<div id="glasses" class="offset">
+
+  <div class="col-12 narrow text-center">
+    <h1 style="font-size: 4rem; color: black; font-weight: 350;margin-top: 50px;">Some prescription glasses maybe?</h1>
+    <!-- gonna insert them images here<p></p> -->
+    <div class="container_inner default_template_holder clearfix page_container_inner">
+      <div class="vc_row wpb_row section vc_row-fluid" style=" padding-top:0px; text-align:left;">
+        <div class=" full_section_inner clearfix">
+          <div class="vc_col-sm-12 wpb_column vc_column_container">
+            <div class="wpb_wrapper">
+              <div class="projects_holder_outer v3 portfolio_with_space portfolio_standard ">
+
+              </div>
+              <div class="projects_holder clearfix v3 standard row wow fadeIn ">
+
+                {% for item in object_list %}
+                {% if item.label == 'P' %}
+                <article class="mix portfolio_category_17 portfolio_category_5  mix_all card "
+                  style="display: inline-block; opacity: 1; box-shadow: 4px 4px 8px 0px #888888;">
+                  <div class="image_holder"><a class="portfolio_link_for_touch"
+                      href="http://demo.qodeinteractive.com/bridge/portfolio_page/stockholm-fashion-destination/"
+                      target="_self"><span class="image"><img width="1100" height="825"
+                          style="padding-top: 30px; padding-bottom: 30px;" src="{{ item.image.url }}"
+                          class="attachment-full wp-post-image" alt="qode interactive strata"></span></a><span
+                      class="text_holder"><span class="text_outer"><span class="text_inner"
+                          style="padding-bottom: 30px; "><span class="feature_holder"><span
+                              class="feature_holder_icons"><a class="lightbox qbutton small white" title="Product card"
+                                href="{{ item.image.url }}" data-rel="prettyPhoto[pretty_photo_gallery]"
+                                rel="prettyPhoto[pretty_photo_gallery]">zoom</a></span></span></span></span></span>
+                  </div>
+                  <div class="portfolio_description">
+
+                    <h5 class="portfolio_title">
+                      <strong>
+                        <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}</a></h5>
+                    <span class="project_category "></span>
+                    </strong>
+
+                    <h4 class="font-weight-bold blue-text">
+                      <strong>$
+                        {% if item.discount_price %}
+                        {{ item.discount_price }}
+                        {% else %}
+                        {{ item.price }}
+                        {% endif %}
+                      </strong>
+                    </h4>
+
+                  </div>
+                </article>
+                {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="landing" style=" height: 500px;">
+  <div class="home-wrap">
+    <div class="home-inner"
+      style=" background-image: url(https://c.wallhere.com/photos/97/c5/1926x1280_px_beach_sunglasses-513828.jpg!d);">
+
+    </div>
+  </div>
+</div>
+
+<div id="sunglasses" class="offset">
+
+  <div class="col-12 narrow text-center">
+    <h1 style="font-size: 4rem; color: black; font-weight: 350;margin-top: 50px;">Oh so you want some sun cheaters?</h1>
+    <!-- gonna insert them images here<p></p> -->
+    <div class="container_inner default_template_holder clearfix page_container_inner">
+      <div class="vc_row wpb_row section vc_row-fluid" style=" padding-top:0px; text-align:left;">
+        <div class=" full_section_inner clearfix">
+          <div class="vc_col-sm-12 wpb_column vc_column_container">
+            <div class="wpb_wrapper">
+              <div class="projects_holder_outer v3 portfolio_with_space portfolio_standard ">
+
+              </div>
+              <div class="projects_holder clearfix v3 standard row wow fadeIn ">
+
+                {% for item in object_list %}
+                {% if item.category == 'S' %}
+                <article class="mix portfolio_category_17 portfolio_category_5  mix_all card "
+                  style="display: inline-block; opacity: 1; box-shadow: 4px 4px 8px 0px #888888;">
+                  <div class="image_holder"><a class="portfolio_link_for_touch"
+                      href="http://demo.qodeinteractive.com/bridge/portfolio_page/stockholm-fashion-destination/"
+                      target="_self"><span class="image"><img width="1100" height="825"
+                          style="padding-top: 30px; padding-bottom: 30px;" src="{{ item.image.url }}"
+                          class="attachment-full wp-post-image" alt="qode interactive strata"></span></a><span
+                      class="text_holder"><span class="text_outer"><span class="text_inner"
+                          style="padding-bottom: 30px; "><span class="feature_holder"><span
+                              class="feature_holder_icons"><a class="lightbox qbutton small white" title="Product card"
+                                href="{{ item.image.url }}" data-rel="prettyPhoto[pretty_photo_gallery]"
+                                rel="prettyPhoto[pretty_photo_gallery]">zoom</a></span></span></span></span></span>
+                  </div>
+                  <div class="portfolio_description">
+
+                    <h5 class="portfolio_title">
+                      <strong>
+                        <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}</a></h5>
+                    <span class="project_category "></span>
+                    </strong>
+
+                    <h4 class="font-weight-bold blue-text">
+                      <strong>$
+                        {% if item.discount_price %}
+                        {{ item.discount_price }}
+                        {% else %}
+                        {{ item.price }}
+                        {% endif %}
+                      </strong>
+                    </h4>
+
+                  </div>
+                </article>
+                {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Start Contact -->
+<div id="contact" class="offset">
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb40 text-center">
+          <h1>Meet the Team</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <!-- team-img -->
+          <div class="team-block">
+            <div class="team-img">
+              <img src="static/img/IMG_8591.jpg" alt="">
+
+              <div class="overlay">
+                <div class="text">
+                  <h4 class="mb0 text-white">Riya Chaudhary</h4>
+                  <p class="team-meta">- Backend trickster</p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.team-img -->
+
+        <!-- /.team-img -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <!-- team-img -->
+          <div class="team-block">
+            <div class="team-img">
+              <img src="static/img/rajiv.jpg" alt="" class="img-fluid">
+
+              <div class="overlay">
+                <div class="text">
+                  <h4 class="mb0 text-white">Rajiv Ramchandani</h4>
+                  <p class="mb40 team-meta">- UX/UI</p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.team-img -->
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <!-- team-img -->
+          <div class="team-block">
+            <div class="team-img">
+              <img src="static/img/revin.jfif" alt="" class="img-fluid">
+
+              <div class="overlay">
+                <div class="text">
+
+                  <h4 class="text-white mb0">Revin Raina</h4>
+                  <p class="mb30 team-meta">- Database Entry and Diagrams</p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.team-img -->
+
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <!-- team-img -->
+          <div class="team-block">
+            <div class="team-img">
+              <img src="static/img/adith.jpg" alt="" class="img-fluid">
+
+              <div class="overlay">
+                <div class="text">
+                  <h4 class="text-white mb0">Adith Sanjeev</h4>
+                  <p class="team-meta">- Testing</p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.team-img -->
+      </div>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Contact -->
+
+
+
+<!--Pagination-->
+
+{% if is_paginated %}
+<nav class="d-flex justify-content-center wow fadeIn">
+  <ul class="pagination pg-blue">
+
+    {% if page_obj.has_previous %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    {% endif %}
+
+    <li class="page-item active">
+      <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+        <span class="sr-only">(current)</span>
+      </a>
+    </li>
+
+    {% if page_obj.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
+
+{% endblock content %}
